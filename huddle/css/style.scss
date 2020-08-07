@@ -1,0 +1,213 @@
+@import "mixins";
+
+//variables
+
+$violet: hsl(257, 40%, 49%);
+
+$headingFont: 'Poppins', sans-serif;
+$bodyFont: 'Open Sans', sans-serif;
+
+//Globals
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-size: 100%;
+    background: $violet;
+    color: white;
+    font-family: $bodyFont;
+    font-weight: normal;
+    
+
+    @media screen and (max-width: 640px) {
+        width: 375px;
+        background-image: url(/images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 100%;
+        background-origin: padding-box;
+        padding: 35px 40px;
+    }
+
+    @media screen and (min-width: 640px) {
+        width: 1440px;
+        background-image: url(/images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        padding: 60px 80px;
+    }
+}
+
+.wrapper {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+
+    @media screen and (max-width: 640px) {
+        img {
+            width: 150px;
+            margin-bottom: 50px;
+        }
+    }
+
+    @media screen and (min-width: 640px) {
+        img {
+            width: 200px;
+            margin-bottom: 50px;
+        }
+    }
+
+
+}
+
+.huddle {
+
+    @media screen and (min-width: 640px) {
+        display:flex; 
+    }
+
+    &__image {
+
+        max-width: 720px;
+
+        @media screen and (max-width: 640px) {
+            img {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+        }
+
+    
+
+
+    }
+
+    &__texto {
+        
+        @media screen and (min-width: 640px) {
+            min-width: 500px;
+            max-width: 720px;
+
+            padding: 50px;
+    
+            h1 {
+                font-family: $headingFont;
+                font-size: 35px;
+                font-weight: 700;
+                margin-bottom: 25px;
+            }
+
+            p {
+                color: #dedede;
+                font-size: 18px;
+                width: 577px;
+                line-height: 1.7;
+            }
+
+            a {
+                text-align: center;
+                width: 200px;
+                border-radius: 50px;
+                display: block;
+                padding: 20px 60px;
+                text-decoration: none;
+                color: $violet;
+                background: white;
+                box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.324);
+                margin-top: 30px;
+
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            
+            text-align: center;
+
+            h1 {
+                font-family: $headingFont;
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 25px;
+                
+            }
+
+            p {
+                color: rgb(222, 222, 222);
+                font-size: 0.96875rem;
+            }
+
+            a {
+                text-align: center;
+                width: 200px;
+                border-radius: 50px;
+                display: block;
+                padding: 10px 70px;
+                text-decoration: none;
+                color: $violet;
+                background: white;
+                box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.324);
+                margin: 30px auto; 
+
+            }
+        }
+        
+    
+    
+    }
+
+    
+
+
+}
+
+.footer {
+    
+    @media screen and (max-width: 640px) {
+
+        display: flex;
+        justify-content: center;
+
+        i.fab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px; 
+        border: 1px solid white;
+        border-radius: 100%;
+        }
+
+        i.fab:not(:last-child) {
+        margin-right: 16px;
+        }
+
+    }
+
+    @media screen and (min-width: 640px) {
+
+        display: flex;
+        justify-content: flex-end;
+
+        i.fab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px; 
+        border: 1px solid white;
+        border-radius: 100%;
+        }
+
+        i.fab:not(:last-child) {
+        margin-right: 16px;
+        } 
+
+    }
+
+}

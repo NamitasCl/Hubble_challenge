@@ -1,0 +1,13 @@
+$breakpoint: ("mobile":"23.4375rem", "desktop": "90rem");
+
+@mixin cambio-pantalla($size) {
+    @media (max-width: map-get($breakpoint, $size)) {
+       @content; 
+    }
+}
+
+@mixin cambio-pantalla($size) {
+    @media (min-width: map-get($breakpoint, $size)) {
+       @content; 
+    }
+}
